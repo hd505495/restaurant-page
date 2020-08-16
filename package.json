@@ -13,10 +13,7 @@
   },
   "author": "Hawk Dykes",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hd505495/restaurant-page/issues"
-  },
-  "homepage": "https://github.com/hd505495/restaurant-page#readme",
+  "homepage": "https://hd505495.github.io/restaurant-page/",
   "devDependencies": {
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
