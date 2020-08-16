@@ -64,7 +64,7 @@ const renderHeader = (() => {
     const emailLink = document.createElement('i');
     emailLink.classList.add('fas');
     emailLink.classList.add('fa-envelope');
-    a1.appendChild(emailLink);
+    a3.appendChild(emailLink);
     contactLinks.appendChild(a3);
 
     contactIcons.appendChild(contactLinks);

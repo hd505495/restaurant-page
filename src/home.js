@@ -64,24 +64,24 @@ const renderHome = (() => {
     tabTwo.setAttribute('type', 'radio');
     tabTwo.setAttribute('name', 'tabs');
     tabTwo.setAttribute('id', 'tabtwo');
+    tabTwo.addEventListener('click', renderMenu.render);
     tabs.appendChild(tabTwo);
     const labelTwo = document.createElement('label');
     labelTwo.setAttribute('for', 'tabtwo');
     labelTwo.textContent = 'Menu';
     tabs.appendChild(labelTwo);
-    tabTwo.addEventListener('click', renderMenu.render);
 
     // third tab (contact tab), contact content loaded on click event
     const tabThree = document.createElement('input');
     tabThree.setAttribute('type', 'radio');
     tabThree.setAttribute('name', 'tabs');
     tabThree.setAttribute('id', 'tabthree');
+    tabThree.addEventListener('click', renderContact.render);
     tabs.appendChild(tabThree);
     const labelThree = document.createElement('label');
     labelThree.setAttribute('for', 'tabthree');
     labelThree.textContent = 'Contact';
     tabs.appendChild(labelThree);
-    tabThree.addEventListener('click', renderContact.render);
 
     main.appendChild(tabs);
     container.appendChild(main);

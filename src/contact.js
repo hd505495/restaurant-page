@@ -13,7 +13,7 @@ const renderContact = (() => {
       container.removeChild(child);
       child = container.lastChild;
     }
-  }
+  } 
 
   const render = () => {
     _clearPage();
@@ -33,49 +33,31 @@ const renderContact = (() => {
     tabOne.setAttribute('type', 'radio');
     tabOne.setAttribute('name', 'tabs');
     tabOne.setAttribute('id', 'tabone');
+    tabOne.addEventListener('click', renderHome.render);
     tabs.appendChild(tabOne);
     const labelOne = document.createElement('label');
     labelOne.setAttribute('for', 'tabone');
     labelOne.textContent = 'Home';
     tabs.appendChild(labelOne);
-    tabOne.addEventListener('click', renderHome.render);
-
-    // home tab content
-   /* const homeContent = document.createElement('div');
-    homeContent.classList.add('tab');
-    homeContent.setAttribute('id', 'homeTab');
-    const contentText = document.createElement('h1');
-    contentText.setAttribute('id', 'homeHeader');
-    contentText.textContent = 'Serving Your ';
-    const typingText = document.createElement('div');
-    typingText.classList.add('text-primary');
-    typingText.classList.add('txt-type');
-    typingText.dataset.wait = 3000;
-    typingText.dataset.words = ['Cravings', 'Favorites', 'Family', 'Friends', 'Hunger'];
-
-    contentText.appendChild(typingText);
-    homeContent.appendChild(contentText);
-    tabs.appendChild(homeContent);
-    */
 
     // second tab (menu tab), menu content loaded on click event
     const tabTwo = document.createElement('input');
     tabTwo.setAttribute('type', 'radio');
     tabTwo.setAttribute('name', 'tabs');
     tabTwo.setAttribute('id', 'tabtwo');
+    tabTwo.addEventListener('click', renderMenu.render);
     tabs.appendChild(tabTwo);
     const labelTwo = document.createElement('label');
     labelTwo.setAttribute('for', 'tabtwo');
     labelTwo.textContent = 'Menu';
     tabs.appendChild(labelTwo);
-    tabTwo.addEventListener('click', renderMenu.render);
 
-    // third tab (contact tab), contact content loaded on click event
+    // third tab (contact tab)
     const tabThree = document.createElement('input');
     tabThree.setAttribute('type', 'radio');
     tabThree.setAttribute('name', 'tabs');
     tabThree.setAttribute('id', 'tabthree');
-    tabOne.setAttribute('checked', 'checked');
+    tabThree.setAttribute('checked', 'checked');
     tabs.appendChild(tabThree);
     const labelThree = document.createElement('label');
     labelThree.setAttribute('for', 'tabthree');
@@ -159,6 +141,28 @@ const renderContact = (() => {
     const footer = renderFooter.render();
     container.appendChild(footer);
 
+    initMapAPI();
+
+    /*
+
+
+
+window.addEventListener("DOMContentLoaded",initMapAPI,false); 
+
+    container.innerHTML += `
+    <script>
+      function myMap() {
+      let mapProp= {
+        center:new google.maps.LatLng(33.510320,-112.072510),
+        zoom:15,
+      };
+      let map = new google.maps.Map(document.getElementById("maps"),mapProp);
+      }
+      </script>
+      
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBavBShtE72hTCwaGl7cS0OAujIrigxO3I&callback=myMap"></script>
+      `;
+*/
   }
 
   return {render};
