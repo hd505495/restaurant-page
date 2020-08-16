@@ -18,12 +18,15 @@ html {
 }
 
 body {
-  background: #eee;
+  /*background: #eee;*/
   background-image: url('images/pizza-restaurant-2.png');
   background-repeat: no-repeat;
   background-size: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
   margin: 0 auto;
 }
+
 
 #content {
   min-height: 100vh;

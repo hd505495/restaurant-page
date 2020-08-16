@@ -4,12 +4,12 @@ const renderFooter = (() => {
 
     const footer = document.createElement('footer');
 
+    let date = new Date().getFullYear();
+
     const footerContent = document.createElement('div');
     footer.appendChild(footerContent);
-    footerContent.innerHTML += 'Copyright &copy;';
-    const script = document.createElement('script');
-    script.textContent = `document.write(new Date().getFullYear());`;
-    footerContent.appendChild(script);
+    footerContent.innerHTML += 'Copyright &copy; &nbsp;';
+    footerContent.innerHTML += date;
     footerContent.innerHTML += `&nbsp; | &nbsp; Created by Hawk Dykes &nbsp; | &nbsp;`;
     const a = document.createElement('a');
     a.setAttribute('href', 'https://github.com/hd505495');
