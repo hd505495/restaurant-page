@@ -142,27 +142,6 @@ const renderContact = (() => {
     container.appendChild(footer);
 
     initMapAPI();
-
-    /*
-
-
-
-window.addEventListener("DOMContentLoaded",initMapAPI,false); 
-
-    container.innerHTML += `
-    <script>
-      function myMap() {
-      let mapProp= {
-        center:new google.maps.LatLng(33.510320,-112.072510),
-        zoom:15,
-      };
-      let map = new google.maps.Map(document.getElementById("maps"),mapProp);
-      }
-      </script>
-      
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBavBShtE72hTCwaGl7cS0OAujIrigxO3I&callback=myMap"></script>
-      `;
-*/
   }
 
   return {render};
