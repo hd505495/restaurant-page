@@ -12,13 +12,11 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  /*font-family: Verdana, sans-serif, Geneva, Tahoma;*/
   font-family: 'Times New Roman', Times, serif;
   height: 100%;
 }
 
 body {
-  /*background: #eee;*/
   background-image: url('images/pizza-restaurant-2.png');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -81,9 +79,7 @@ address >p[class="bar"] {
 .contact-icon {
   display: inline-block;
   margin: 0.5rem;
-  /*color: #90CAF9 !important;*/
   color: var(--main-complement);
-  /*color: rgba(255, 127, 80, 0.4);*/
 }
 
 .contact-icon:hover {
@@ -230,7 +226,6 @@ h2 {
   height: 200px;
   width: 330px;
   border-radius: 3px;
-  /*padding: 10px; */
   background-color: rgba(0, 0, 0, 0.7);
   transform: scale(1.0);
   border-radius: 5px;
